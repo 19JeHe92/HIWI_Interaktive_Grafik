@@ -22,3 +22,6 @@ Additionally, you’ll need to make sure you have pip available. You can check t
 If you installed Python from source, with an installer from python.org, you should already have pip.
 
 ### 2. Use XAMPP
+
+
+No matter which way you started the server, now enter `localhost:8000` into the address bar of your browser. The project should now be displayed in the browser window.
