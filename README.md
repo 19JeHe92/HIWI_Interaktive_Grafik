@@ -21,12 +21,25 @@ Additionally, you’ll need to make sure you have pip available. You can check t
 
 If you installed Python from source, with an installer from python.org, you should already have pip.
 
+Now open the command prompt and enter the follwing commands in your terminal:
+
+#### Switch to project location
+`cd src`
+#### Run local server
+`python -m http`
+
 ### 2. Use XAMPP
+
+#### Start Apache server
+
+#### Run local server
+
+#### Copy data into corecct directory
 
 ...
 
-
-No matter which way you started the server, now enter `localhost:8000` (or only `localhost` when you're using XAMPP) into the address bar of your browser. (Localhost means the file is coming from your computer and not from an external server).
+## Running the Application on browser
+No matter which way you started the server, now enter URL `localhost:8000` (or only `localhost` when you're using XAMPP) into the address bar of your browser. (Localhost means the file is coming from your computer and not from an external server).
 
 The project should now be displayed in the browser window.
 
