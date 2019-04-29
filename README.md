@@ -3,7 +3,9 @@
 ## Getting started
 These instructions will get you a copy of the project and show you how to running it on your local machine for development and testing purposes.
 
-There are several ways to start a local server on your computer. Here two possible ways are described.
+This project creates an interactive graphic from a data set. For security reasons most browsers will not allow loading data through external sources unless you're on a server. This forces you to set up a local server on your machine.
+
+There are several ways to easily start a local server on your computer. Here two possible ways are described.
 
 ### 1. Use python
 Make sure you've python and pip
