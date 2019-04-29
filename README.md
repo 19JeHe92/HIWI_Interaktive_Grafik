@@ -23,5 +23,11 @@ If you installed Python from source, with an installer from python.org, you shou
 
 ### 2. Use XAMPP
 
+...
 
-No matter which way you started the server, now enter `localhost:8000` into the address bar of your browser. The project should now be displayed in the browser window.
+
+No matter which way you started the server, now enter `localhost:8000` (or only `localhost` when you're using XAMPP) into the address bar of your browser. (Localhost means the file is coming from your computer and not from an external server).
+
+The project should now be displayed in the browser window.
+
+## Change data
