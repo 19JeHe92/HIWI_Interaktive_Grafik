@@ -1,0 +1,23 @@
+# Mastering data visualization ind D3.js
+## Getting started with D3
+* Grundsatz: Data driven Documents
+  -> Daten stehen im Vordergrund
+  -> HTML nur Mittel zum Zweck
+  -> Ursprung: Daten die D3 automatisch in HTML umwandeln soll
+  -> Daten sollen in Graphen/Tabellen umgewandelt werden ohne, dass man sich mit HTML auseinandersetzen muss
+* D3 vs. JQuery:
+  - jQuery = gesteuerte, gezielte Manipulation con DOM Elementen (Hinterlegen von Eigenschaften oder setzen von CSS Attributen)
+  - D3 = automatische Manipulation von DOM Elementen auf Basis der Daten
+* Technische Aspekte:
+  - Manipulation von:
+     + DOM
+     + CSS
+     + SVG
+  - Datenmanipulation - Umgang mit:
+     + JSON
+     + TSV
+     + CSV
+     + XML
+  -> Daten lesen, suchen, filtern, mappen
+
+## Understanding SVGs
