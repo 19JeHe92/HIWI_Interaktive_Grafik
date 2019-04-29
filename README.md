@@ -5,7 +5,7 @@ These instructions will get you a copy of the project and show you how to runnin
 
 There are several ways to start a local server on your computer. Here two possible ways are described.
 
-### Use python
+### (1) Use python
 Make sure you've python and pip
 Before you go any further, make sure you have Python and that it’s available from your command line. You can check this by simply running:
 
@@ -19,4 +19,4 @@ Additionally, you’ll need to make sure you have pip available. You can check t
 
 If you installed Python from source, with an installer from python.org, you should already have pip.
 
-### Use XAMPP
+### (2) Use XAMPP
