@@ -8,6 +8,9 @@ This project creates an interactive graphic from a data set. For security reason
 There are several ways to easily start a local server on your computer. Here two possible ways are described.
 
 ### 1. Use python
+You can use the http server that comes in built with python.
+
+#### Install python
 Make sure you've python and pip installed. Before you go any further, make sure you have Python and that it’s available from your command line. You can check this by simply running:
 
 `python --version`
@@ -20,20 +23,23 @@ Additionally, you’ll need to make sure you have pip available. You can check t
 
 If you installed Python from source, with an installer from python.org, you should already have pip.
 
-
-Now open the command prompt and enter the follwing commands in your terminal:
-
-#### Switch to project location
+#### Run python http server
+Once you have python installed open your command terminal in the folder that you want to run your server.
+To switch to project location enter the following line in your terminal:
 `cd src\Interaktive_Grafik`
 
-#### Run local server
-`python -m http`
+To run the local server enter the command:
+`python -m http.server`
 
 ![alt Run Python server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/python_server.JPG)
+
+Here you can see that the server is working on port 8000.
 
 #### Run project in browser
+Go to your browser and enter `localhost:8000` in the adress bar. (Localhost means the file is coming from your computer and not from an external server).
 
-![alt Run Python server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/python_server.JPG)
+Now you will see the files from the diretory we're looking at.
+![alt Run Python server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/python_server_2.JPG)
 
 
 ### 2. Use XAMPP
@@ -41,12 +47,14 @@ Make sure you've XAMPP installed. If you do not have XAMPP, please install the l
 
 #### Start Apache server
 First open XAMPP. All you have to to is press start and it should boot up.
+
 ![alt Run Apache server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server.JPG)
 
 You may get a message saying that this programm requires permission to boot up a server. Just say yes.
 
 
 Apache should turn green indicating that the program is working.
+
 ![alt Run Apache server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server_2.JPG)
 
 If you dont see it turn green then canches are that it failed. In this case you'll need to look at this log below to see the error.
@@ -88,6 +96,6 @@ Go back to your browser and navigate to `localhost`. (Localhost means the file i
 
 Now you will see the project running.
 
-![alt Copy data into correct directory](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server_10.JPG)
+![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server_10.JPG)
 
 ## Edit project
