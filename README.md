@@ -20,6 +20,7 @@ Additionally, you’ll need to make sure you have pip available. You can check t
 
 If you installed Python from source, with an installer from python.org, you should already have pip.
 
+
 Now open the command prompt and enter the follwing commands in your terminal:
 
 #### Switch to project location
@@ -27,20 +28,22 @@ Now open the command prompt and enter the follwing commands in your terminal:
 #### Run local server
 `python -m http`
 
+![alt Run Python server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/python_server.JPG)
 ### 2. Use XAMPP
 Make sure you've XAMPP installed. If you do not have XAMPP, please install the latest version from https://www.apachefriends.org/de
 
 #### Start Apache server
-
+![alt Run Apache server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server.JPG)
 #### Run local server
-
-#### Copy data into corecct directory
-
+![alt Run Apache server](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server(2).JPG)
+#### Copy data into correct directory
+![alt Copy data into correct directory](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server_dir.JPG)
 ...
 
 ## Running the Application on browser
 No matter which way you started the server, now enter URL `localhost:8000` (or only `localhost` when you're using XAMPP) into the address bar of your browser. (Localhost means the file is coming from your computer and not from an external server).
 
 The project should now be displayed in the browser window.
+![alt Project in browser](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/browser_project.JPG)
 
 ## Change data
