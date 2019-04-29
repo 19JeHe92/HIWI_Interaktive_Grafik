@@ -8,12 +8,11 @@ This project creates an interactive graphic from a data set. For security reason
 There are several ways to easily start a local server on your computer. Here two possible ways are described.
 
 ### 1. Use python
-Make sure you've python and pip
-Before you go any further, make sure you have Python and that it’s available from your command line. You can check this by simply running:
+Make sure you've python and pip installed. Before you go any further, make sure you have Python and that it’s available from your command line. You can check this by simply running:
 
 `python --version`
 
-You should get some output like 3.6.2. If you do not have Python, please install the latest 3.x version from python.org
+You should get some output like 3.6.2. If you do not have Python, please install the latest 3.x version from https://www.python.org
 
 Additionally, you’ll need to make sure you have pip available. You can check this by running:
 
@@ -29,6 +28,7 @@ Now open the command prompt and enter the follwing commands in your terminal:
 `python -m http`
 
 ### 2. Use XAMPP
+Make sure you've XAMPP installed. If you do not have XAMPP, please install the latest version from https://www.apachefriends.org/de
 
 #### Start Apache server
 
