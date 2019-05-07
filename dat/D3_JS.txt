@@ -21,3 +21,170 @@
   -> Daten lesen, suchen, filtern, mappen
 
 ## Understanding SVGs
+* SVG - Scalable Vector Graphics
+* Draw shapes with computer code
+    - rectangles, circles, ellipses, lines, text and paths
+    - only need to add information, such where we want to position a shape and how bis it shuld be
+* Markup code similar to html
+* Small file size
+* dont lose any quality if resized
+* if resized they dont take up much space
+
+### SVG Markup language
+* You can use markup language in HTML documents for SVGs or JavaScript
+* HTML Example:
+    <svg width="400" height="60">
+          <!-- "x" and "y" coordinates give a shape its position (top left hand corner) -->
+          <rect x="0" y="0" width="50" height="50" fill="green"></rect>
+
+          <!-- For circles, choose the center with "cx" and "cy", and the radius with "r" -->
+          <circle cx="90" cy="25" r="25" fill="red"></circle>
+
+          <!-- Ellipses are similar, but they take "ry" and "rx" attributes -->
+          <ellipse cx="145" cy="25" rx="15" ry="25" fill="grey"></ellipse>
+
+          <!-- Lines need two paris of coordinates and a stroke width -->
+          <line x1="185" y1="5" x2="230" y2="40" stroke="blue" stroke-width="5"></line>
+
+          <!-- Text takes an x/y coordinate and a font size -->
+          <text x="260" y="25" font-size="20px" fill="orange">Hello World</text>
+      </svg>
+
+      - You need the <svg></svg> tag to surround everything that you want to render
+      - That SVG tag represents the "canvas" that we'll drawing on
+      - any svg that you try to draw outside of the canvas wont appear in the screen
+      - closer look on code:
+        <svg width="400" height="60">
+        -> defining an svg canvas with a width of 400px and a height of 60px
+
+        inside the canvas we position our SVGs based their x and y coordinates starting from (0,0)  and the top-left hand corner
+
+        SVG RECTANGLE
+        <svg width="400" height="60">
+            <rect x="0" y="0" width="50" height="50" fill="green" stroke="grey" stroke-width="5px"></rect>
+        </svg>
+        -> "x" and "y" coordinates give a shape its position (top left hand corner)
+        -> "width" and "heigth" give a shape its size
+        -> "fill" color the shape
+        -> "stroke" gives the shape an outline. this takes a color. you also need a "stroke-width" to define how wide the outline is.
+
+        SVG CIRCLE
+        <svg width="400" height="60">
+            <circle cx="90" cy="25" r="25" fill="red"></circle>
+        </svg>
+        -> For circles, choose the center with "cx" and "cy", and the radius with "r"
+
+        SVG ELLIPSE
+        <svg width="400" height="60">
+            <ellipse cx="145" cy="25" rx="15" ry="25" fill="grey"></ellipse>
+        </svg>
+        -> Ellipses are similar, but they take "ry" and "rx" attributes
+
+        SVG LINE
+        <svg width="400" height="60">
+            <line x1="185" y1="5" x2="230" y2="40" stroke="blue" stroke-width="5"></line>
+        </svg>
+        -> Lines need two paris of coordinates and a stroke width
+        -> Color of line is set with the "stroke" attribute
+
+        SVG POLYGON
+        <svg width="400" height="60">
+            <polygon points="220,10 300,210 170,250 123,234" fill="red"></polygon>
+        </svg>
+        -> creates a 5 sided red polygon
+        -> "point" attribute includes all polygon points. SVG draw polygon automatically based on these points. Each point have to seperate by space. for more polygone sides add new point.
+
+        SVG POLYLINE
+        <svg width="400" height="60">
+            <polyline points="220,10 300,210 170,250 123,234" fill="none"></polyline>
+        </svg>
+        -> draws a polyline. svg connect eah point without auotmatically fill it
+
+        SVG TEXT
+        <svg width="400" height="60">
+            <text x="260" y="25" font-size="20px" fill="orange" text-anchor="middle">Hello World</text>
+        </svg>
+        -> Text takes an x/y coordinate and a font size
+        -> by default the x and y attribute give us the top left position of the text but we can change this behavior using the "text-anchor" attribute
+        using attribute "text-anchor=middle" so the coordinates math the top middle of the text.
+        -> to create multiline text add the tag <tspan></tspan> inside <text> tag
+        <svg width="400" height="60">
+            <text x="260" y="25" font-size="20px" fill="orange" text-anchor="middle">Hello World</text>
+            <tspan x="200" y="40">Second Line</tspan>
+        </svg>
+        -> create a link:
+        <a xlink:href="https://examplepage.com" target="_blank">
+          <text x="50" y="50" fill="red" font-size="30">
+            Hello World!
+            <tspan x="200" y="200"> Second Line</tspan>
+          </text>
+        </a>
+        -> Align text to line (using definitions - see below):
+        <svg width="400" height="400">
+            <defs>
+              <path id="custom_text_path" d="M0,0 L300,300"></path>
+            </defs>
+
+            <text x="50" y="50" stroke="black" font-size="30">
+              <textPath xlink:href="custom_text_path">
+                Hello World!
+              </textPath>
+            </text>
+        </svg>
+
+        SVG PATH
+        -> most powerful kind of SVG
+        -> can be used to create lines, curves, arcs and all kinds of complex shapes
+        <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/>
+        </svg>
+        -> "d" attribute is what the path gives its shape
+        -> this attribute contains a set of different letters and numbers which our browser can decode to figure out how the path should look
+        -> example 1:
+        <path d="
+          M 100, 100    // will not draw. uses as space between canvas border or shapes
+          L 300, 150    // line with coordinates (300, 150)
+          L 300, 300    // line with coordinates (300, 300) -> both lines will be connected
+          Z             // closes gap between both lines automatically -> so you have an triangle for example
+          "
+          fill="none" stroke="black" stroke-width=10></path>
+
+          <path d="
+            M 100, 100            // will not draw. uses as space between canvas border or shapes
+            L 300, 150            // line with coordinates (300, 150)
+            L 300, 300            // line with coordinates (300, 300) -> both lines will be connected
+            Q 200, 400 100, 200   // quadratic curve
+            "
+            fill="none" stroke="black" stroke-width=10></path>
+
+
+        => you dont need to know how the "d" attribute workes. D3.js provides us with a set of different path generators which will take in data and create these d attributes
+
+* SVG Definitions
+  - You can use definitions to create reusable elements
+  - example:
+    <svg width="400" height="400">
+        <defs>
+          <rect width="50" height="50" x="0" y="0" id="rectangle"></rect>
+        </defs>
+
+        <use xlink:href="rectangle" x="0" y="0"></use>
+        <use xlink:href="rectangle" x="100" y="100"></use>
+    </svg>
+    -> using the ID attribute in <rect> tag you can reuse the element inside <use> tag
+* SVG Groups
+  - allow you to organize shapes together
+  - example:
+  <svg width="400" height="400">
+      <defs>
+        <g id="rectangle">
+          <rect width="50" height="50"></rect>
+          <rect width="50" height="50" x="50"></rect>
+        </g>
+      </defs>
+
+      <use xlink:href="rectangle" x="0" y="0"></use>
+  </svg>
+  -> allow you to reuse several elements
+
+* Adding SVGs with JavaScript (D3.js)
