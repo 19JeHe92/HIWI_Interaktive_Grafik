@@ -56,4 +56,74 @@ d3.json('data/data.json', (error, root) => {
 
     root = d3.hierarchy(root);
     root.sum(d => d.size);
+
+    const slice = svg.selectAll('g.slice')
+        .data(partition(root).descendants());
+
+    slice.exit().remove();
+
+    const newSlice = slice.enter()
+        .append('g').attr('class', 'slice')
+        .on('click', d => {
+            d3.event.stopPropagation();
+            focusOn(d);
+        });
+
+    newSlice.append('title')
+        // .text(d => d.data.name + '\n' + formatNumber(d.value));
+        // .text(d => d.data.description);
+        .text(function(d) {
+            if (d.depth == 0) {
+                return "Zoom out"
+            }
+        });
+
+    newSlice.append('path')
+        .attr('class', 'main-arc')
+        .style('fill', d => d.data.color)
+        .on("mouseover", mouseOverArc)
+        .on("mousemove", mouseMoveArc)
+        .on("mouseout", mouseOutArc)
+        .attr('d', arc);
+
+    newSlice.append('path')
+        .attr('class', 'hidden-arc')
+        .attr('id', (_, i) => `hiddenArc${i}`)
+        .attr('d', middleArcLine);
+
+    const text = newSlice.append('text')
+        .attr('display', d => textFits(d) ? null : 'none');
+
+    // // Add white contour
+    // text.append('textPath')
+    //     .attr('startOffset','50%')
+    //     .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+    //     .text(d => d.data.name)
+    //     .style('fill', 'none')
+    //     .style('stroke', '#fff')
+    //     .style('stroke-width', 5)
+    //     .style('stroke-linejoin', 'round');
+
+    text.append('textPath')
+        .style("fill","white")
+        .style("font-weight","bold")
+        .style("font-size","1.5em")
+        .attr('startOffset','50%')
+        .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+        .text(function(d) {
+            if (d.depth == 1 ) {
+                return d.data.name
+            }
+        });
+    text.append('textPath')
+        .style("fill","black")
+        .style("font-size","1em")
+        .attr('startOffset','50%')
+        .attr('xlink:href', (_, i) => `#hiddenArc${i}` )
+        .text(function(d) {
+            if (d.depth > 1 ) {
+                return d.data.name
+            }
+        });
+});
 }
