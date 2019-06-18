@@ -96,6 +96,7 @@ Go back to your browser and navigate to `localhost`. (Localhost means the file i
 
 Now you will see the project running.
 
-![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server_10.JPG)
+![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/running_grafik.JPG)
 
 ## Edit project
+To change grafic data edit the data.json file located in `src\data`
