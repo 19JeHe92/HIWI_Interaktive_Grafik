@@ -34,3 +34,13 @@ const middleArcLine = d => {
     path.arc(0, 0, r, angles[0], angles[1], invertDirection);
     return path.toString();
 };
+
+const textFits = d => {
+    const CHAR_SPACE = 6;
+
+    const deltaAngle = x(d.x1) - x(d.x0);
+    const r = Math.max(0, (y(d.y0) + y(d.y1)) / 2);
+    const perimeter = r * deltaAngle;
+
+    return d.data.name.length * CHAR_SPACE < perimeter;
+};
