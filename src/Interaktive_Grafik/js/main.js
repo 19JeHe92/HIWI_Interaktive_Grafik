@@ -51,3 +51,9 @@ const svg = d3.select('body').append('svg')
     .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
     .on('click', () => focusOn()); // Reset zoom on canvas click
 
+d3.json('data/data.json', (error, root) => {
+    if (error) throw error;
+
+    root = d3.hierarchy(root);
+    root.sum(d => d.size);
+}
