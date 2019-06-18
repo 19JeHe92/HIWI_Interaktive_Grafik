@@ -44,3 +44,10 @@ const textFits = d => {
 
     return d.data.name.length * CHAR_SPACE < perimeter;
 };
+
+const svg = d3.select('body').append('svg')
+    .style('width', '100vw')
+    .style('height', '100vh')
+    .attr('viewBox', `${-width / 2} ${-height / 2} ${width} ${height}`)
+    .on('click', () => focusOn()); // Reset zoom on canvas click
+
