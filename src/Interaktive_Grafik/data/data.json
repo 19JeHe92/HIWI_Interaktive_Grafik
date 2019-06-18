@@ -1,0 +1,150 @@
+{
+    "name": "Usability Engineering", "color": "#FFF", "children": [{
+        "name": "Analyse",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
+        "color": "#FF7F00",
+        "children": [{
+            "name": "Deskriptive Analyse",
+            "description": "Deskriptive Analyse Text",
+            "color": "#FDC086",
+            "children": [{
+                "name": "Ziele",
+                "color": "#FDC086",
+                "description": "Ziele Text",
+                "size": 5
+            },
+            {
+                "name": "Personas",
+                "description": "Personas Text",
+                "color": "#FDC086",
+                "size": 5
+            }]
+        },
+        {
+            "name": "Inhaltsanalyse",
+            "description": "Inhaltsanalyse Text",
+            "color": "#FDC086",
+            "children": [{
+                "name": "Szenarien",
+                "description": "Szenarien Text",
+                "color": "#FDC086",
+                "size": 10
+            }]
+        }]
+    },
+    {
+        "name": "Konzeption",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
+        "color": "#24A121",
+        "children": [{
+            "name": "Pattern Analyse",
+            "description": "Pattern Analyse Text",
+            "color": "#7FC97F",
+            "children": [{
+                "name": "Aktivitätsdiagramm",
+                "description": "Aktivitätsdiagramm Text",
+                "color": "#7FC97F",
+                "size": 6.6
+            }]
+        },
+        {
+            "name": "Prototyping",
+            "description": "Prototyping Text",
+            "color": "#7FC97F",
+            "children": [{
+                "name": "Design Principles",
+                "description": "Design Principles Text",
+                "color": "#7FC97F",
+                "size": 6.6
+            }]
+        },
+        {
+            "name": "Usability Testing",
+            "description": "Usability Testing Text",
+            "color": "#7FC97F",
+            "children": [{
+                "name": "Pattern Katalog",
+                "description": "Pattern Katalog Text",
+                "color": "#7FC97F",
+                "size": 6.6
+            }]
+        }]
+    },
+    {
+        "name": "Umsetzung",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
+        "color": "#D8241F",
+        "children": [{
+            "name": "Usability Testing",
+            "description": "Usability Testing Text",
+            "color": "#FB9A99",
+            "children": [{
+                "name": "Schnittstellen",
+                "description": "Schnittstellen Text",
+                "color": "#FB9A99",
+                "size": 6.6
+            },
+            {
+                "name": "Komponenten",
+                "description": "Komponenten Text",
+                "color": "#FB9A99",
+                "size": 6.6
+            },
+            {
+                "name": "Rollenmodell",
+                "description": "Rollenmodell Text",
+                "color": "#FB9A99",
+                "size": 6.6
+            }]
+        }]
+    },
+    {
+        "name": "Sammlung",
+        "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
+        "color": "#1776B6",
+        "children": [{
+            "name": "Beobachtung",
+            "description": "Beobachtung Text",
+            "color": "#A6CEE3",
+            "children": [{
+                "name": "Report",
+                "description": "Report Text",
+                "size": 5,
+                "color": "#A6CEE3"
+            }]
+        },
+        {
+            "name": "Nutzertagebücher",
+            "description": "Nutzertagebücher Text",
+            "color": "#A6CEE3",
+            "children": [{
+                "name": "Lastenheft",
+                "description": "Lastenheft Text",
+                "color": "#A6CEE3",
+                "size": 5
+            }]
+        },
+        {
+            "name": "Nutzerbefragung",
+            "description": "Nutzerbefragung Text",
+            "color": "#A6CEE3",
+            "children": [{
+                "name": "Datensätze",
+                "description": "Datensätze Text",
+                "color": "#A6CEE3",
+                "size": 5
+            }]
+        },
+        {
+            "name": "Experteninterview",
+            "description": "Experteninterview Text",
+            "color": "#A6CEE3",
+            "children": [{
+                "name": "Transkription",
+                "description": "Transkription Text",
+                "color": "#A6CEE3",
+                "size": 5
+                }]
+            }]
+    }]
+}
