@@ -126,4 +126,38 @@ d3.json('data/data.json', (error, root) => {
             }
         });
 });
+
+function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
+    // Reset to top-level if no data point specified
+
+    const transition = svg.transition()
+        .duration(750)
+        .tween('scale', () => {
+            const xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
+                yd = d3.interpolate(y.domain(), [d.y0, 1]);
+            return t => { x.domain(xd(t)); y.domain(yd(t)); };
+        });
+
+    transition.selectAll('path.main-arc')
+        .attrTween('d', d => () => arc(d));
+
+    transition.selectAll('path.hidden-arc')
+        .attrTween('d', d => () => middleArcLine(d));
+
+    transition.selectAll('text')
+        .attrTween('display', d => () => textFits(d) ? null : 'none');
+
+    moveStackToFront(d);
+
+    //
+
+    function moveStackToFront(elD) {
+        svg.selectAll('.slice').filter(d => d === elD)
+            .each(function(d) {
+                this.parentNode.appendChild(this);
+                if (d.parent) { moveStackToFront(d.parent); }
+            })
+    }
+}
+
 }
