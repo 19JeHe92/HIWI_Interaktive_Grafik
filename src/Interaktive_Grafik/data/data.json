@@ -1,6 +1,6 @@
 {
     "name": "Usability Engineering", "color": "#FFF", "children": [{
-        "name": "Analyse",
+        "name": "2. Analyse",
         "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
         "color": "#FF7F00",
         "children": [{
@@ -33,7 +33,7 @@
         }]
     },
     {
-        "name": "Konzeption",
+        "name": "3. Konzeption",
         "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
         "color": "#24A121",
         "children": [{
@@ -71,7 +71,7 @@
         }]
     },
     {
-        "name": "Umsetzung",
+        "name": "4. Umsetzung",
         "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
         "color": "#D8241F",
         "children": [{
@@ -99,7 +99,7 @@
         }]
     },
     {
-        "name": "Sammlung",
+        "name": "1. Sammlung",
         "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. ",
         "color": "#1776B6",
         "children": [{
