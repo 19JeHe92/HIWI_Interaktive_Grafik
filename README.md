@@ -100,3 +100,4 @@ Now you will see the project running.
 
 ## Edit project
 To change grafic data edit the data.json file located in `src\data`
+![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/data_json.JPG)
