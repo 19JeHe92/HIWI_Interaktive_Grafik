@@ -170,7 +170,7 @@ var tooltip = d3.select("body")
 
 function format_description(d) {
   var description = d.data.description;
-      return  '<h3><b>' + d.data.name + '</b></h3>'+ d.data.description;
+      return  '<h4><b>' + d.data.name + '</b></h4>'+ d.data.description;
 }
 
 function mouseOverArc(d) {
