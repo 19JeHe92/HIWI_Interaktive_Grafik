@@ -160,4 +160,37 @@ function focusOn(d = { x0: 0, x1: 1, y0: 0, y1: 1 }) {
     }
 }
 
+//Tooltip description
+var tooltip = d3.select("body")
+    .append("div")
+    .attr("id", "tooltip")
+    .style("position", "absolute")
+    .style("z-index", "10")
+    .style("opacity", 0);
+
+function format_description(d) {
+  var description = d.data.description;
+      return  '<h3><b>' + d.data.name + '</b></h3>'+ d.data.description;
+}
+
+function mouseOverArc(d) {
+    if (d.depth > 0) {
+        d3.select(this).style("fill","lightgrey")
+        tooltip.html(format_description(d));
+        return tooltip.transition()
+            .duration(50)
+            .style("opacity", 0.9);
+    }
+
+}
+
+function mouseOutArc(d){
+	d3.select(this).style("fill"," "+ d.data.color + "")
+	return tooltip.style("opacity", 0);
+}
+
+function mouseMoveArc (d) {
+          return tooltip
+            .style("top", (d3.event.pageY-10)+"px")
+            .style("left", (d3.event.pageX+10)+"px");
 }
