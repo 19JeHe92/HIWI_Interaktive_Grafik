@@ -98,10 +98,12 @@ Go back to your browser and navigate to `localhost`. (Localhost means the file i
 
 Now you will see the project running.
 
-Zoomable Donut Chart
+##### Zoomable Donut Chart
 ![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/running_grafik.JPG)
+
 ![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/running_grafik2.JPG)
 
-Multilevel Donut Chart
+##### Multilevel Donut Chart
 ![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/running_grafik3.JPG)
+
 ![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/running_grafik4.JPG)
