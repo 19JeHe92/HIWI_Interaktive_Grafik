@@ -91,6 +91,8 @@ Copy all files into htdocs folder.
 
 ![alt Copy data into correct directory](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/apache_server_9.JPG)
 
+Note: If you do not want to install any program you can use the portable version of XAMPP.
+
 #### Run project in browser
 Go back to your browser and navigate to `localhost`. (Localhost means the file is coming from your computer and not from an external server).
 
@@ -99,5 +101,9 @@ Now you will see the project running.
 ![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/running_grafik.JPG)
 
 ## Edit project
-To change grafic data edit the data.json file located in `src\data`
+To change graphic data edit the data.json file located in `src\data`.
 ![Running project](https://github.com/19JeHe92/HIWI_Interaktive_Grafik/blob/master/howto/img/data_json.JPG)
+
+To change the size of graphic change the width and height attribute ( line 1 and 2 ) in main.js file located in `src\js`.
+
+To change the font size of graphic change the body font size attribute in style.css located in `src\style.css`.
